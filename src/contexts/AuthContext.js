@@ -27,6 +27,13 @@ export function AuthProvider({ children }) {
         return auth.signInWithEmailAndPassword(email, password)
     }  
 
+    
+    // 로그아웃시 액션 설정 == 아무 정보도 가져올 필요 없으므로 () 비움
+    function logout() {
+       return  auth.signOut();
+    }
+
+
       
     // 사용자가 입력할때만 이펙트를 적용하도록 설정하기
     useEffect(() => {
@@ -47,7 +54,7 @@ export function AuthProvider({ children }) {
         currentUser,
         login,
         signup,
-        
+        logout,
     }
     return (
         // Provider를 반환
