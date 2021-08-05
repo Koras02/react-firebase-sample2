@@ -39,6 +39,20 @@ export function AuthProvider({ children }) {
         return auth.sendPasswordResetEmail(email);
     }
 
+    // 이메일과 비밀번호를 업데이트 하게 만들기
+    function updateEmail(email) {
+        // 업데이트할 이메일을 return 
+       return currentUser.updateEmail(email);
+
+    }
+
+
+    function updatePassword(password) {
+        // 업데이트할 비밀번호를 return 
+        return currentUser.updatePassword(password);
+    }
+
+
       
     // 사용자가 입력할때만 이펙트를 적용하도록 설정하기
     useEffect(() => {
@@ -60,7 +74,9 @@ export function AuthProvider({ children }) {
         login,
         signup,
         logout,
-        resetPassword
+        resetPassword,
+        updateEmail,
+        updatePassword
     }
     return (
         // Provider를 반환
