@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react'
 import { Card, Form, Button, Alert } from 'react-bootstrap'
+import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function Signup() {
@@ -19,6 +20,9 @@ export default function Signup() {
     const [loading, setLoading] = useState(false);
 
 
+    // 회원가입시 로그인창으로 이동 
+    const history = useHistory();
+
      // async 주의
      async function handleSubmit(e) {
         e.preventDefault()
@@ -36,12 +40,15 @@ export default function Signup() {
             setLoading(true)
             // 로그인시 브라우저가 확인할 이메일 비밀번호를 참고하게 만듬
             // 오류가 발생할떄 비동기식 함수를 작동해서 이 액션을 기다리다 오류를 뱉어내기
+            // await signup(emailRef.current.value, passwordRef.current.value)
+            // 현재 로그인을 최종적으로 보여주기 위해 await 에 login
             await signup(emailRef.current.value, passwordRef.current.value)
+            history.push('/');
 
         } catch {
             // 오류 설정
             // 비밀번호 오류가 발생하는 이유는 이미 가입된 중복정보 이기 떄문이다. 
-            setError("비밀번호 오류로 회원가입을 하실수 없습니다.")
+            setError("비밀번호가 맞지않아 회원가입이 불가능합니다.")
         }
         // 모든 작업이 완료될떄 로딩을 비활성
         setLoading(false)
@@ -86,7 +93,8 @@ export default function Signup() {
             </Card.Body> 
             </Card>
             <div className="w-100 text-center mt-2">
-               로그인을 하시겠습니까? 로그인
+               로그인을 하시겠습니까? <Link to="/login">로그인
+               </Link>
             </div>
         </>
     )
