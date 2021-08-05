@@ -21,6 +21,12 @@ export function AuthProvider({ children }) {
         setLoading(false);
         return auth.createUserWithEmailAndPassword(email , password)
     };
+
+    // 로그인 시 액션 설정
+    function login(email, password) {
+        return auth.signInWithEmailAndPassword(email, password)
+    }  
+
       
     // 사용자가 입력할때만 이펙트를 적용하도록 설정하기
     useEffect(() => {
@@ -39,6 +45,7 @@ export function AuthProvider({ children }) {
     const value = {
         // 값에 현재 사용자를 저장 
         currentUser,
+        login,
         signup,
         
     }

@@ -2,8 +2,11 @@ import React from 'react'
 import Signup from './Signup';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from '../contexts/AuthContext';
- 
-const App = () => {
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Dashboard from './Dashboard';
+import Login from './Login';
+
+function App()  {
   return (
     <> 
     <Container
@@ -11,11 +14,21 @@ const App = () => {
       style={{ minHeight: "100vh" }}
       >
       <div className="w-100" style={{ maxWidth: "400px"}}>
-      <AuthProvider>
-     <Signup />
-    </AuthProvider>
+        <Router>
+            <AuthProvider>
+               <Switch>
+                 {/* 각각 router 설정 */}
+                   <Route exact path="/" component={Dashboard} />
+                   <Route path="/signup" component={Signup} />
+                   <Route path="/login" component={Login} />
+               
+               </Switch>
+            </AuthProvider>
+        </Router>
+ 
      </div>
     </Container>
+ 
     </> 
   );
 }
