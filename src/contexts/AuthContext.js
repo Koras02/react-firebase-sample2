@@ -33,6 +33,11 @@ export function AuthProvider({ children }) {
        return  auth.signOut();
     }
 
+   // 비밀번호찾기에 대한 context 선언
+    function resetPassword(email) {
+        // 만들었던 이메일주소로 메일을 보냄
+        return auth.sendPasswordResetEmail(email);
+    }
 
       
     // 사용자가 입력할때만 이펙트를 적용하도록 설정하기
@@ -55,6 +60,7 @@ export function AuthProvider({ children }) {
         login,
         signup,
         logout,
+        resetPassword
     }
     return (
         // Provider를 반환
