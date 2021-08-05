@@ -74,6 +74,9 @@ export default function ForgotPassword() {
                  {/* {currentUser && currentUser.email} */}
 
                  {error && <Alert variant="danger">{error}</Alert>}
+                {/* 사용자에게 이메일이 전송되는것을 알고  */}
+                {message && <Alert variant="danger">{message}</Alert>}
+
                  <Form onSubmit={handleSubmit}>
                      <Form.Group id="email">
                         <Form.Label>이메일 주소</Form.Label>
