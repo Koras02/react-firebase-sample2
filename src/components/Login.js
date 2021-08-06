@@ -38,7 +38,7 @@ export default function Login() {
            await login(emailRef.current.value, passwordRef.current.value)
 
            // 로그인시 이동 
-           history.push("/")
+           history.push("/react-firebase-sample2")
        } catch {
            // 오류 설정
            // 비밀번호 오류가 발생하는 이유는 이미 가입된 중복정보 이기 떄문이다. 
