@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.15cbc1d2.chunk.js",
-    "main.js.map": "/static/js/main.15cbc1d2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.63cf3a9d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.63cf3a9d.js.map",
-    "static/css/2.c490997a.chunk.css": "/static/css/2.c490997a.chunk.css",
-    "static/js/2.21304b0b.chunk.js": "/static/js/2.21304b0b.chunk.js",
-    "static/js/2.21304b0b.chunk.js.map": "/static/js/2.21304b0b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.c490997a.chunk.css.map": "/static/css/2.c490997a.chunk.css.map",
-    "static/js/2.21304b0b.chunk.js.LICENSE.txt": "/static/js/2.21304b0b.chunk.js.LICENSE.txt"
+    "main.js": "/react-firebase-sample2/static/js/main.62c64f4e.chunk.js",
+    "main.js.map": "/react-firebase-sample2/static/js/main.62c64f4e.chunk.js.map",
+    "runtime-main.js": "/react-firebase-sample2/static/js/runtime-main.9d83fc84.js",
+    "runtime-main.js.map": "/react-firebase-sample2/static/js/runtime-main.9d83fc84.js.map",
+    "static/css/2.c490997a.chunk.css": "/react-firebase-sample2/static/css/2.c490997a.chunk.css",
+    "static/js/2.21304b0b.chunk.js": "/react-firebase-sample2/static/js/2.21304b0b.chunk.js",
+    "static/js/2.21304b0b.chunk.js.map": "/react-firebase-sample2/static/js/2.21304b0b.chunk.js.map",
+    "index.html": "/react-firebase-sample2/index.html",
+    "static/css/2.c490997a.chunk.css.map": "/react-firebase-sample2/static/css/2.c490997a.chunk.css.map",
+    "static/js/2.21304b0b.chunk.js.LICENSE.txt": "/react-firebase-sample2/static/js/2.21304b0b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.63cf3a9d.js",
+    "static/js/runtime-main.9d83fc84.js",
     "static/css/2.c490997a.chunk.css",
     "static/js/2.21304b0b.chunk.js",
-    "static/js/main.15cbc1d2.chunk.js"
+    "static/js/main.62c64f4e.chunk.js"
   ]
 }
