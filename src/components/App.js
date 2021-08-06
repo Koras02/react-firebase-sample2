@@ -21,7 +21,7 @@ function App()  {
             <AuthProvider>
                <Switch>
                  {/* 각각 router 설정 */}
-                   <PrivateRoute exact path="/" component={Dashboard} />
+                   <PrivateRoute exact path="/react-firebase-sample2" component={Dashboard} />
                    <PrivateRoute exact path="/update-profile" component={UpdateProfile} />
                    
                    <Route path="/signup" component={Signup} />

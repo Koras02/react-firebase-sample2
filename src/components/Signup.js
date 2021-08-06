@@ -43,7 +43,7 @@ export default function Signup() {
             // await signup(emailRef.current.value, passwordRef.current.value)
             // 현재 로그인을 최종적으로 보여주기 위해 await 에 login
             await signup(emailRef.current.value, passwordRef.current.value)
-            history.push('/');
+            history.push('/react-firebase-sample2');
 
         } catch {
             // 오류 설정
